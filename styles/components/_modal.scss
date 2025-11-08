@@ -1,0 +1,25 @@
+.modal {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: $color-sky-blue-500;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    & .modal-content {
+        padding: 2rem;
+        & .add-ad-form {
+            display: flex;
+            flex-direction: column;
+            & .add-button {
+                background-color: $color-sky-blue-600;
+                color: #fff;
+                transition: background-color 0.2s ease-in-out;
+                &:hover {
+                    background-color: $color-sky-blue-800;
+                }
+            }
+        }
+    }
+}

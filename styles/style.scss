@@ -1,0 +1,66 @@
+@use "./base/test" as *;
+@use "./base/mixins" as *;
+@use "./base/function" as f;
+@import "./base/clearDefault.scss";
+@import "./base/colors.scss";
+@import "./components/modal";
+@import "./components/header.scss";
+
+@debug f.pow(5, 2);
+
+%flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer {
+    @extend %template;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.wrapper {
+    height: 70vh;
+    @extend %flex-column-center;
+
+    & a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+#add {
+    @include set_size(50px, 50px);
+    @include set_shadow();
+    border-radius: 50%;
+    background-color: $color-sky-blue-600;
+    border: none;
+    color: #fff;
+    position: fixed;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+        background-color: $color-sky-blue-800;
+    }
+    bottom: 7rem;
+    right: 3rem;
+    z-index: 999;
+}
+
+.ad {
+    @extend %flex-column-center;
+    padding: 1rem;
+    margin: 1rem;
+
+    // border: 5px solid $color-sky-blue-600;
+    // border-radius: 10px;
+
+    
+    & img {
+        @include set_size(200px, 100%);
+    }
+}

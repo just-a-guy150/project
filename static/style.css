@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.modal {
+  display: none;
+  width: fit-content;
+  height: fit-content;
+  background-color: oklch(87.668% 0.055 229.78deg);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .modal-content {
+  padding: 2rem;
+}
+.modal .modal-content .add-ad-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal-content .add-ad-form .add-button {
+  background-color: oklch(82.213% 0.07978 230.25deg);
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+.modal .modal-content .add-ad-form .add-button:hover {
+  background-color: oklch(69.998% 0.12922 235.32deg);
+}
+
+footer, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: oklch(69.998% 0.12922 235.32deg);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  height: 10vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ad, .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.wrapper {
+  height: 70vh;
+}
+.wrapper a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#add {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background-color: oklch(82.213% 0.07978 230.25deg);
+  border: none;
+  color: #fff;
+  position: fixed;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+#add:hover {
+  background-color: oklch(69.998% 0.12922 235.32deg);
+}
+#add {
+  bottom: 7rem;
+  right: 3rem;
+  z-index: 999;
+}
+
+.ad {
+  padding: 1rem;
+  margin: 1rem;
+}
+.ad img {
+  width: 200px;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
