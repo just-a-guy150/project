@@ -20,7 +20,7 @@
 
                 </div>
                 <%- include('postform.ejs') %>
-                <%- include('commentlist.ejs'), {comments: product.comments} %>
+                <%- include('commentlist.ejs', {comments: product.comments}) %>
                 <% console.log(product); %>
             </div>
         <%- include('footer.ejs') %>
